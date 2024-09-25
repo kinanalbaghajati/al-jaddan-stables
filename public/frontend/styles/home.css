@@ -1,0 +1,237 @@
+@font-face {
+  font-family: "Granda";
+  src: url(../fonts/ae_Granada-1.ttf) format("truetype");
+  font-display: swap;
+}
+main {
+  margin: 0;
+}
+#home-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#home-bg img {
+  height: 100dvh;
+  height: 100vh;
+  object-fit: cover;
+}
+
+#home-bg-title {
+  position: absolute;
+  font-size: clamp(35px, 6vw, 70px);
+  font-family: "Granda";
+  color: var(--main-color);
+  width: 100%;
+  height: fit-content;
+  margin-top: -5vw;
+  margin-left: -10rem;
+  line-height: 150px;
+  text-align: center;
+}
+#home-bg button {
+  position: absolute;
+  margin-top: 14rem;
+  margin-left: -70vw;
+  border: 0;
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 6px 35px;
+  border-radius: 10px;
+}
+
+.rm-btn {
+  border: 0;
+  padding: 0;
+  font-weight: 600;
+  background-color: transparent;
+  border-bottom: 1px solid var(--main-color);
+  color: var(--main-color);
+  margin-bottom: 1rem;
+  line-height: 18px;
+}
+
+.section-heading {
+  color: var(--main-color);
+  font-family: var(--sec-font-family);
+}
+.section-heading span {
+  font-size: 60px;
+}
+
+#home-pure-horses {
+  margin-top: 6rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+#home-pure-horses img {
+  width: 100%;
+  height: 400px;
+}
+#home-pure-horses #box {
+  position: absolute;
+  width: 400px;
+  background-color: #ffffffa3;
+  border-radius: 16px;
+  padding: 2.5rem 2.5rem 4rem 2.5rem;
+  margin-left: 6rem;
+}
+
+#home-pure-horses p {
+  text-align: justify;
+}
+
+#home-gallery {
+  margin-top: 8rem;
+}
+
+/* slider */
+#myCarousel img {
+  width: 1024px;
+  height: 576px;
+  border-radius: 20px;
+}
+
+#myCarousel {
+  width: 100%;
+  padding: 1rem;
+  filter: drop-shadow(0 0 10px #cacaca);
+}
+
+#myCarousel .f-carousel__slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.f-thumbs {
+  margin-top: -4rem;
+}
+
+.f-carousel__thumbs.is-classic {
+  --f-thumb-gap: 8px;
+  --f-thumb-opacity: 0.8;
+}
+.f-thumbs img {
+  border-radius: 15px;
+}
+.f-thumbs__slide,
+.f-thumbs__slide__button {
+  width: 150px;
+  height: 100px;
+}
+
+#home-contactus {
+  margin-top: 10rem;
+}
+
+form :is(input, textarea) {
+  border: 1px solid var(--sec-color);
+  border-radius: 8px;
+  padding: 8px 10px;
+  outline: 0;
+  width: 360px;
+}
+form > div {
+  position: relative;
+}
+form label {
+  position: absolute;
+  color: var(--sec-color);
+  margin-left: 8px;
+  left: 0;
+  margin-top: 8px;
+  pointer-events: none;
+  background-color: #fff;
+  padding: 0 5px;
+  transition: margin 0.3s;
+}
+form :is(input:is(:valid, :focus), textarea:is(:valid, :focus)) ~ label {
+  margin-top: -12px;
+  margin-left: 20px;
+}
+
+form button {
+  background-color: var(--main-color);
+  color: #fff;
+  border-radius: 8px;
+  border: 0;
+  outline: 0;
+  padding: 5px 10px;
+  transition: all 0.3s;
+}
+::placeholder {
+  color: var(--sec-color);
+}
+@media screen and (max-width: 1024px) {
+  #home-bg img {
+    object-position: right;
+  }
+  #home-bg-title {
+    line-height: 100px;
+    margin-left: -34vw;
+  }
+  #myCarousel img {
+    width: 720px;
+    height: 405px;
+    border-radius: 14px;
+  }
+
+  .f-thumbs__slide,
+  .f-thumbs__slide__button {
+    width: 100px;
+    height: 70px;
+  }
+  .f-thumbs {
+    margin-top: -3.5rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  #myCarousel img {
+    width: 85vw;
+    height: auto;
+    border-radius: 14px;
+  }
+  #home-pure-horses {
+    display: flex;
+    justify-content: center;
+  }
+  #home-pure-horses #box {
+    width: 95vw;
+    padding: 2.5rem 2.5rem 4rem 2.5rem;
+    margin-left: 0;
+  }
+  #home-bg-title {
+    line-height: 60px;
+    margin-left: 0;
+    margin-top: -14rem;
+  }
+  #home-bg button {
+    margin-top: -4rem;
+    margin-left: -12rem;
+    font-size: 12px;
+    padding: 5px 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #home-bg img,
+  #home-pure-horses img {
+    object-fit: cover;
+    object-position: right;
+  }
+
+  .f-thumbs__slide,
+  .f-thumbs__slide__button {
+    width: 16vw;
+    height: 50px;
+    margin-top: 1.5rem;
+  }
+  .section-heading span {
+    font-size: 40px;
+  }
+
+  form :is(input, textarea) {
+    width: 90vw;
+  }
+}

@@ -1,0 +1,30 @@
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+nav li:nth-child(6) {
+  font-weight: bold;
+}
+nav {
+  position: static;
+}
+h1 {
+  font-family: var(--sec-font-family);
+  color: var(--main-color);
+}
+main {
+  margin-top: 6rem;
+}
+p {
+  margin-top: 5rem;
+}
+main a {
+  color: #181818;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    position: static;
+  }
+}

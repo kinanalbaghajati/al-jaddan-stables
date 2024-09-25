@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<section class="page-content {{page-class}}">
+  {{>navigation}}
+  <article class="main" role="main">
+    <headerBlade>
+      <h2>{{title}}</h2>
+    </headerBlade>
+
+    {{#if page.side-nav}}
+      {{partial page.side-nav this}}
+    {{else}}
+      {{>side-navigation}}
+    {{/if}}
+
+    <div class="content">
+      {{>body}}
+    </div>
+  </article>
+</section>
