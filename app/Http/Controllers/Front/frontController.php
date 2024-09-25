@@ -31,7 +31,7 @@ class frontController extends Controller
                 'email' => 'required|email',
                 'message' => 'required|min:30|max:300'
             ]);
-            Mail::to('kkinan797@gmail.com')->send(new ContactMail(['email' => $request->email, 'name' => $request->name, 'message' => $request->message]));
+            Mail::to('Info@aljadaanstables.com')->send(new ContactMail(['email' => $request->email, 'name' => $request->name, 'message' => $request->message]));
 
             return redirect('/#home-contactus')->with('message_suc', "Email Sent Successfully");
 
